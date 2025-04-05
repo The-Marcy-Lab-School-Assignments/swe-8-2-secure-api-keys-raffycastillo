@@ -1,8 +1,13 @@
-import { getTrendingGifs } from '../adapters/giphyAdapters';
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState
+} from 'react'
 
-function GifContainer() {
-    const [gifs, setGifs] = useState([]);
+import {
+  getTrendingGifs
+} from '../adapters/giphyAdapters';
+
+function GifContainer({ gifs, setGifs }) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
